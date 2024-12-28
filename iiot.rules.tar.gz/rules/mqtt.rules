@@ -1,0 +1,2 @@
+alert tcp any any -> any 1883 (msg:"MQTT benign traffic detected - smart/grid"; content:"smart/grid"; nocase; content:"power: 500W"; nocase; sid:1000003; rev:1; priority:3;)
+alert tcp any any -> any 1883 (msg:"MQTT sinister traffic detected - smart/grid/control"; content:"smart/grid/control"; nocase; content:"shutdown=true"; nocase; sid:1000004; rev:1; priority:1;)
